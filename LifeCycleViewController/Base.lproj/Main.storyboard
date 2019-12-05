@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First View Controller-->
+        <!--First VC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="FirstViewController" customModule="LifeCycleViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="First VC" id="BYZ-38-t0r" customClass="FirstViewController" customModule="LifeCycleViewController" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,7 +31,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="4Wj-7W-NwF"/>
+                    <navigationItem key="navigationItem" title="First VC" id="4Wj-7W-NwF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -55,10 +55,10 @@
             </objects>
             <point key="canvasLocation" x="138.40000000000001" y="126.38680659670166"/>
         </scene>
-        <!--Second View Controller-->
+        <!--Second VC-->
         <scene sceneID="Gq1-LT-Anb">
             <objects>
-                <viewController id="8C0-NL-8SR" customClass="SecondViewController" customModule="LifeCycleViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Second VC" id="8C0-NL-8SR" customClass="SecondViewController" customModule="LifeCycleViewController" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lhw-sH-5md">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -79,16 +79,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rwN-gH-8KS"/>
                     </view>
-                    <navigationItem key="navigationItem" id="rKu-9x-Vlg"/>
+                    <navigationItem key="navigationItem" title="Second VC" id="rKu-9x-Vlg"/>
+                    <connections>
+                        <outlet property="openThirdViewController" destination="f3c-BF-j8D" id="lit-a8-Yt1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WQP-MU-wbp" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1711" y="125"/>
         </scene>
-        <!--Third View Controller-->
+        <!--Third VC-->
         <scene sceneID="jzl-u9-JxS">
             <objects>
-                <viewController id="Tln-P0-PFD" customClass="ThirdViewController" customModule="LifeCycleViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Third VC" id="Tln-P0-PFD" customClass="ThirdViewController" customModule="LifeCycleViewController" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kpY-RD-kMu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,6 +100,9 @@
                                 <rect key="frame" x="85" y="314" width="205" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Close View Controller"/>
+                                <connections>
+                                    <action selector="closeButton" destination="Tln-P0-PFD" eventType="touchUpInside" id="35l-PN-0Af"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
